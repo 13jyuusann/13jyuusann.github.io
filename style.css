@@ -58,7 +58,8 @@ h1 {
 }
 
 p,
-span {
+span,
+#hitokoto {
   font-size: 12px;
 }
 
