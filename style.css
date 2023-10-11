@@ -43,6 +43,7 @@ body {
   border: 1px solid #a7a7a7;
   box-shadow: 5px 5px 0px rgba(207, 207, 207, 0.8);
   background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
 }
 
 .avatar {
@@ -83,14 +84,13 @@ a:hover{
 .button a {
   text-decoration: none;
   box-shadow: 2px 2px 0px rgba(207, 207, 207, 1);
-  font-size: 12px;
   /*   Google Button   */
   color: #444444;
   background: #F3F3F3;
   border: 1px #f8f9fa solid;
   padding: 5px 10px;
   border-radius: 2px;
-  /*   font-weight: bold; */
+  font-weight: bold;
   font-size: 9pt;
   outline: none;
 }
