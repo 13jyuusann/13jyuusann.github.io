@@ -1,10 +1,12 @@
 // Hitokoto
+const hitokotoElement = document.getElementById("hitokoto");
+
 fetch("https://v1.hitokoto.cn?encode=json")
     .then(response => {
         if (response.ok) {
             return response.json();
         } else {
-            document.getElementById("hitokoto").innerHTML = "Hitokoto加载失败惹";
+            hitokotoElement.innerHTML = "Hitokoto加载失败惹";
         }
     })
     .then(json => {
@@ -17,9 +19,10 @@ fetch("https://v1.hitokoto.cn?encode=json")
                 }
             }
             replaceNullWithEmpty(json);
-            document.getElementById("hitokoto").innerHTML = json.hitokoto;
-            document.getElementById("hitokoto").href = "https://hitokoto.cn?uuid=" + json.uuid;
-            document.getElementById("hitokoto").target = "_blank";
-            document.getElementById("hitokoto").title = "——" + json.from_who + "「" + json.from + "」";
+            const hitokotoElement = document.getElementById("hitokoto");
+            hitokotoElement.innerHTML = `${json.hitokoto}`;
+            hitokotoElement.href = `https://hitokoto.cn?uuid=${json.uuid}`;
+            hitokotoElement.target = "_blank";
+            hitokotoElement.title = `——${json.from_who}「${json.from}」`;
         }
     });
