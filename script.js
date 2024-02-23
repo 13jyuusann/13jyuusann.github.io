@@ -26,3 +26,8 @@ fetch("https://v1.hitokoto.cn?encode=json")
             hitokotoElement.title = `——${json.from_who}「${json.from}」`;
         }
     });
+
+// 自动更新页脚年份
+const currentYear = new Date().getFullYear();
+const yearLink = document.getElementById("year");
+yearLink.textContent = currentYear;
